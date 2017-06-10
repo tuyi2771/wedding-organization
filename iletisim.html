@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Düğün Organizasyonu - İletişim</title>
+	<link rel="icon" href="img/logo.png">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="body">
+  <!--  ............................ Header ........................ -->
+  <div id="header">
+  <a id="logo" href="anasayfa.html"><img border="0" src="img/logo.png" width="100" height="100"></a>
+    <div align="right">
+      <button type="button" id ="detaylarbtn" onClick="location.href='detaylar.html'">Detaylar</button>
+      <button type="button" id ="iletisimbtn" onClick="location.href='iletisim.html'">İletişim</button>
+      <button type="button" id="cikisbtn" onClick="location.href='logout.php'">Çıkış</button>
+    </div>
+    
+  </div>
+  <!--  ............................ Main Content ........................ -->           
+  <div id="content" align="center">
+
+  
+  <!--  ............................ Main Content ........................ -->   
+   <h1>Bizimle İletişime Geçin</h1>        
+  <div id="content" align="center">
+ <div align="center">
+      <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+  <div class="row">
+    <label for="name" style="color: gray">Adınız:</label><br />
+    <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+  </div>
+  <div class="row">
+    <label for="email" style="color: gray">Mail adresiniz:</label><br />
+    <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+  </div>
+  <div class="row">
+    <label for="message" style="color: gray">Mesajınız:</label><br />
+    <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+  </div>
+  <input id="submit_button" type="submit" value="Send email" style="color: gray" />
+</form>   
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<!--  ............................ Footer ........................ -->
+  <div id="footer" align="center"> 
+    <div>
+      <p>Copyright © 2017</p>
+    </div>
+  </div>
+</body>
+</html>

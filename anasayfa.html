@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Düğün Organizasyonu</title>
+  <link rel="icon" href="img/logo.png">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="body">
+  <!--  ............................ Header ........................ -->
+  <div id="header">
+  <a id="logo" href="anasayfa.html"><img border="0" src="img/logo.png" width="100" height="100"></a>
+    <div align="right">
+      <button type="button" id ="detaylarbtn" onClick="location.href='detaylar.html'">Detaylar</button>
+      <button type="button" id ="iletisimbtn" onClick="location.href='iletisim.html'">İletişim</button>
+      <button type="button" id="cikisbtn" onClick="location.href='logout.php'">Çıkış</button>
+    </div>
+    
+  </div>
+  <!--  ............................ Main Content ........................ -->           
+  <div id="content" align="center">
+    
+
+
+    <!--Slider-->
+    <div id="maincontent" >
+    <!-- use jssor.slider.debug.js instead for debug -->
+    <h1>Düğünleriniz Bizimle Güzel</h1>
+    <script>
+        jssor_1_slider_init = function() {
+            
+            var jssor_1_options = {
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+            
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 980);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", $Jssor$.$WindowResizeFilter(window, ScaleSlider));
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            //responsive code end
+        };
+    </script>
+    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 980px; height: 600px; overflow: hidden; visibility: hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 980px; height: 600px; overflow: hidden;">
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="img/resim1.jpg" />
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="img/resim2.jpg" />
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="img/resim3.jpg" />
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="img/resim4.jpg" />
+            </div>
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb01" style="bottom:16px;right:16px;" data-autocenter="1">
+            <div data-u="prototype" style="width:12px;height:12px;"></div>
+        </div>
+        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora05l" style="top:0px;left:8px;width:40px;height:40px;" data-autocenter="2"></span>
+        <span data-u="arrowright" class="jssora05r" style="top:0px;right:8px;width:40px;height:40px;" data-autocenter="2"></span>
+    </div>
+    <script>
+        jssor_1_slider_init();
+    </script>
+    </div>
+
+  </div>
+  <!--  ............................ Footer ........................ -->
+  <div id="footer" align="center"> 
+    <div>
+      <p>Copyright © 2017, Ünye-Ordu</p>
+    </div>
+  </div>
+</body>
+</html>

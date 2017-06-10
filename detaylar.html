@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Düğün Organizasyonu - Detaylar</title>
+	<link rel="icon" href="img/logo.png">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  
+  <script src="js/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body id="body">
+  <!--  ............................ Header ........................ -->
+  <div id="header">
+  <a id="logo" href="anasayfa.html"><img border="0" src="img/logo.png" width="100" height="100"></a>
+    <div align="right">
+      <button type="button" id ="detaylarbtn" onClick="location.href='detaylar.html'">Detaylar</button>
+      <button type="button" id ="iletisimbtn" onClick="location.href='iletisim.html'">İletişim</button>
+      <button type="button" id="cikisbtn" onClick="location.href='logout.php'">Çıkış</button>
+    </div>
+    
+  </div>
+  <!--  ............................ Main Content ........................ -->   
+  <div id="content" align="center">
+           
+  
+
+
+    
+    
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="map"></div>
+
+    <script>
+     
+
+       function initMap() {
+        var myLatLng = {lat: x, lng: y};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+
+        var marker1= new google.maps.Marker({
+          position:{lat: lat: x1, lng: y1},
+          map: map,
+          title: 'Hello World!'
+        });
+          var marker2= new google.maps.Marker({
+          position: {lat: x2, lng: y2},
+          map: map,
+          title: 'Hello World!'
+        });
+           var marker3= new google.maps.Marker({
+          position: {lat: x3, lng: y3},
+          map: map,
+          title: 'Hello World!'
+        });
+           marker.addListener('click', function() {
+           	window.location.href='marker.html'
+         
+        });
+         //  map.addOverlay(marker);
+           marker1.addListener('click', function() {
+           	window.location.href='marker1.html'
+        });
+           // map.addOverlay(marker1);
+           marker2.addListener('click', function() {
+           	window.location.href='marker2.html'
+        });
+            //map.addOverlay(marker2);
+           marker3.addListener('click', function() {
+           	window.location.href='marker3.html'
+        });
+            //map.addOverlay(marker3);
+      }
+
+      
+    </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_MAP_API&callback=initMap">
+    </script>
+</div>
+<!--  ............................ Footer ........................ -->
+  <div id="footer" align="center"> 
+    <div>
+      <p>Copyright © 2017</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Düğün Organizasyonu - Detaylar</title>
+  <link rel="icon" href="img/logo.png">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  
+  <script src="js/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body id="body">
+  <!--  ............................ Header ........................ -->
+  <div id="header">
+  <a id="logo" href="anasayfa.html"><img border="0" src="img/logo.png" width="100" height="100"></a>
+    <div align="right">
+      <button type="button" id ="detaylarbtn" onClick="location.href='detaylar.html'">Detaylar</button>
+      <button type="button" id ="iletisimbtn" onClick="location.href='iletisim.html'">İletişim</button>
+      <button type="button" id="cikisbtn" onClick="location.href='logout.php'">Çıkış</button>
+    </div>
+    
+  </div>
+  <!--  ............................ Main Content ........................ -->   
+  <div id="content" align="center">
+   <script>
+  $(document).ready(function() {
+    $("#datepicker").datepicker();
+  });
+  </script>
+  <form action="randevu.php" method="post">
+     <input type="text" id="datepicker" name="tarih" value="Date"/>
+    <input type="submit" name="submit">
+</form>
+  
+
+</div>
+
+  <!--  ............................ Footer ........................ -->
+  <div id="footer" align="center"> 
+    <div>
+      <p>Copyright © 2017</p>
+    </div>
+  </div>
+</body>
+</html>
